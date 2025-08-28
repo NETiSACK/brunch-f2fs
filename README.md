@@ -15,6 +15,8 @@
 <!-- Warning -->
 ## Warning
 
+This project still in experimental and in-development state!
+
 Please take a look at [Brunch Framework by sebanc][bruch-framework] and [F2FS][f2fs] first if you don't know what this fork about.
 
 This fork and I will not take any responsibility If anything bad happened to your device.
