@@ -39,11 +39,11 @@ Following partitions will be formatted as F2FS upon install and update:
 - ROOT-C
 - OEM
 
+See more about ChromeOS partition scheme: [ChromiumOS Drive Partitions][chromiumos-drive-partitions]
+
 This fork also using additional kernel patches:
 - [Kernel Compiler Patch by graysky2][kernel-compiler-patch]
 - [BORE Scheduler][bore-scheduler]
-
-See more: [ChromiumOS Drive Partitions][chromiumos-drive-partitions]
 
 ## Install Instructions
 
