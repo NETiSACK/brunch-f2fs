@@ -39,7 +39,7 @@ Following partitions will be formatted as F2FS upon install and update:
 - ROOT-C
 - OEM
 
-This fork also containing additional kernel patches:
+This fork also using additional kernel patches:
 - [Kernel Compiler Patch by graysky2][kernel-compiler-patch]
 - [BORE Scheduler][bore-scheduler]
 
