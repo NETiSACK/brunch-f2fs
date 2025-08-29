@@ -21,7 +21,7 @@ Please take a look at [Brunch Framework by sebanc][bruch-framework] and [F2FS][f
 
 This fork and I will not take any responsibility If anything bad happened to your device.
 
-F2FS is a best performance and higher longevity for Flash-memory based storage like eMMC, but also known for data lost and corruption upon dirty shutdown.
+F2FS is a best performance and higher longevity for Flash-memory based storage like eMMC, widely used on Android and embedded Linux systems but also known for data lost and corruption upon dirty shutdown.
 
 So, this project is suitable for battery-enabled devices like Tablet PC or cheap laptop with eMMC storage.
 
