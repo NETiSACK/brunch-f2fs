@@ -1,7 +1,6 @@
-name: Build Brunch using Github Actions
+name: Build Brunch
 on:
   workflow_dispatch:
-  push:
 concurrency:
   group: environment-${{ github.ref }}
   cancel-in-progress: true

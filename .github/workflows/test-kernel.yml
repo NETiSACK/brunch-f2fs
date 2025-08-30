@@ -1,7 +1,6 @@
-name: Test Building Kernel using Github Actions
+name: Test Building Kernel
 on:
   workflow_dispatch:
-  push:
 concurrency:
   group: environment-${{ github.ref }}
   cancel-in-progress: true
