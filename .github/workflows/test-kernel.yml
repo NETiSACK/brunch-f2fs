@@ -1,6 +1,5 @@
 name: Test Building Kernel
 on:
-  workflow_dispatch:
   push:
 concurrency:
   group: environment-${{ github.ref }}

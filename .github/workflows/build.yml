@@ -1,6 +1,5 @@
 name: Build Brunch
 on:
-  workflow_dispatch:
   push:
 concurrency:
   group: environment-${{ github.ref }}
