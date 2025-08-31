@@ -39,14 +39,19 @@ Following partitions will be formatted as F2FS:
 - ROOT-C
 - OEM
 
+See more about ChromeOS partition scheme: [ChromiumOS Drive Partitions][chromiumos-drive-partitions]
+
 **Installing from host OS system into target disk will still in original ext2/ext4 partitions until installing into internal disk like eMMC inside USB Boot, which done by `chromeos-install` command from ChromeOS itself.**
 
 **So, full disk installation by USB Boot is required to preventing this [issue][data-corruption-f2fs].**
 
-See more about ChromeOS partition scheme: [ChromiumOS Drive Partitions][chromiumos-drive-partitions]
+**Then, USB Boot will always using older kernel as default for creating F2FS partition.**
 
-This fork also using additional kernel patches:
+This fork also using these kernel patches:
 - [BORE Scheduler][bore-scheduler]
+
+Brunch Framework with F2FS also containing these features:
+- Graceful hibernate before battery almost running out (configurable via PWA or tty2 as root)
 
 ## Install Instructions
 
