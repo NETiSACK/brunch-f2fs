@@ -51,8 +51,8 @@ This fork also using these kernel patches:
 - [BORE Scheduler][bore-scheduler]
 
 Brunch Framework with F2FS also containing these features:
-- Graceful hibernate before battery almost running out (configurable via PWA or tty2 as root)
-- Configurable BORE Scheduler via PWA
+- Configurable graceful shutdown before battery almost running out (using PWA or tty2 as root)
+- Configurable BORE Scheduler (using PWA or tty2 as root)
 
 ## Install Instructions
 
