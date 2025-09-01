@@ -3,6 +3,7 @@
 <!-- Shields/Logos -->
 [![License][license-shield]][license-url]
 [![Issues][issues-shield]][issues-url]
+[![Build Brunch with F2FS (Unstable)][build-unstable-shield]][build-unstable-url]
 
 <!-- Project Logo -->
 <p align="center">
@@ -66,6 +67,8 @@ Note: There will likely no support for linuxloops.
 [license-url]: ./LICENSE
 [issues-shield]: https://img.shields.io/github/issues/NETiSACK/brunch-f2fs?label=Issues&logo=Github&style=flat-square
 [issues-url]: https://github.com/NETiSACK/brunch-f2fs/issues
+[build-unstable-shield]: https://github.com/NETiSACK/brunch-f2fs/actions/workflows/build-unstable.yml/badge.svg?branch=r138
+[build-unstable-url]: https://github.com/NETiSACK/brunch-f2fs/actions/workflows/build-unstable.yml
 
 <!-- Outbound Links -->
 [bruch-framework]: https://github.com/sebanc/brunch
