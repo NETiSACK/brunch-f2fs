@@ -1,5 +1,5 @@
 # Add complementary features to chromeos:
-# - useful tools: dnsmasq, rdmsr, wrmsr, tinyproxy, mksquashfs, unsquashfs, cpuid
+# - useful tools: dnsmasq, rdmsr, wrmsr, tinyproxy, mksquashfs, unsquashfs, cpuid, f2fs-tools
 # - efibootmgr
 # - nano and its ncurses dependency
 # - swtpm
@@ -20,8 +20,11 @@ if [ ! "$?" -eq 0 ]; then ret=$((ret + (2 ** 2))); fi
 tar zxf /rootc/packages/swtpm.tar.gz -C /roota
 if [ ! "$?" -eq 0 ]; then ret=$((ret + (2 ** 3))); fi
 
-tar zxf /rootc/packages/version.tar.gz -C /roota
+tar zxf /rootc/packages/f2fs-tools.tar.gz -C /roota
 if [ ! "$?" -eq 0 ]; then ret=$((ret + (2 ** 4))); fi
+
+tar zxf /rootc/packages/version.tar.gz -C /roota
+if [ ! "$?" -eq 0 ]; then ret=$((ret + (2 ** 5))); fi
 
 for i in $(echo "$1" | sed 's#,# #g')
 do

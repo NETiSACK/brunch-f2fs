@@ -251,6 +251,18 @@ cp unsquashfs ../../initramfs/bin/ || { echo "Failed to make squashfs-tools"; ex
 cd ../.. || { echo "Failed to make squashfs-tools"; exit 1; }
 rm -rf ./squashfs-tools || { echo "Failed to make squashfs-tools"; exit 1; }
 
+git clone --depth=1 -b v1.15.0 https://kernel.googlesource.com/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools || { echo "Failed to make f2fs-tools"; exit 1; }
+cd f2fs-tools || { echo "Failed to make f2fs-tools"; exit 1; }
+./autogen.sh || { echo "Failed to make f2fs-tools"; exit 1; }
+./configure --prefix=/usr --libdir=/usr/lib64  || { echo "Failed to make f2fs-tools"; exit 1; }
+make -j"$NTHREADS"  || { echo "Failed to make f2fs-tools"; exit 1; }
+make DESTDIR=/home/chronos/f2fs-tools-pkg install || { echo "Failed to make f2fs-tools"; exit 1; }
+cd ../f2fs-tools-pkg || { echo "Failed to make f2fs-tools"; exit 1; }
+rm -rf ./usr/include ./usr/share || { echo "Failed to make f2fs-tools"; exit 1; }
+tar zcvf ../rootc/packages/f2fs-tools.tar.gz * --owner=0 --group=0 || { echo "Failed to make f2fs-tools"; exit 1; }
+cd .. || { echo "Failed to make f2fs-tools"; exit 1; }
+rm -rf ./f2fs-tools || { echo "Failed to make f2fs-tools"; exit 1; }
+
 git clone --depth=1 -b 1_33_stable https://github.com/mirror/busybox.git || { echo "Failed to make busybox"; exit 1; }
 cd busybox || { echo "Failed to make busybox"; exit 1; }
 make defconfig || { echo "Failed to make busybox"; exit 1; }
