@@ -327,7 +327,7 @@ sudo umount ./tmp || { echo "Failed to umount efi_legacy image"; exit 1; }
 cd ..
 
 cd ./brunch
-tar zcf /out/brunch_"$version"_"$(date +"%Y%m%d")".tar.gz * --owner=0 --group=0 || { echo "Failed to create brunch archive"; exit 1; }
+tar zcf /out/brunch-f2fs_"$version"_"$(date +"%Y%m%d")".tar.gz * --owner=0 --group=0 || { echo "Failed to create brunch-f2fs archive"; exit 1; }
 cd ..
 
 echo "End of chroot"
